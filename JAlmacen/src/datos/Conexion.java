@@ -5,8 +5,6 @@
 package datos;
 
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -44,7 +42,7 @@ public class Conexion {
             r.next();
             JOptionPane.showMessageDialog(null, r.getString("EMP_RAZON"));
         } catch (SQLException ex) {
-            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"error consulta");
         }
 	System.out.println("Un despliegue de Datos");
     }
