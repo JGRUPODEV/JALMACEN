@@ -17,19 +17,13 @@ import java.sql.SQLException;
 */
 public class Conect {
    static String bd = "sysfia2";
-   public String aaa="";
-   public String xxx = "";
-   static String login = "rootkkk5";
+   static String login = "root";
    static String password = "";
    static String url = "jdbc:mysql://localhost/"+bd;
 
    Connection conn = null;
 
    /** Constructor de DbConnection */
-   public void xx(){
-       
-   
-   }
    public Conect() {
       try{
          //obtenemos el driver de para mysql
