@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class Conexion {
 
-    private String dsn = "jdbc:mysql://localhost:3306/jalmacen";
+    private String dsn = "jdbc:mysql://localhost:3306/sysfia2";
     private String user = "root";
     private String pass = "";
     private Connection cnx = null;
