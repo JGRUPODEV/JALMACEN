@@ -15,7 +15,7 @@ public class Conexion {
 
     private String dsn = "jdbc:mysql://localhost:3306/jalmacen";
     private String user = "root";
-    private String pass = "";
+    private String pass = "1";
     private Connection cnx = null;
     private Connection crear() {
         try {
