@@ -17,7 +17,9 @@ import java.sql.SQLException;
 */
 public class Conect {
    static String bd = "sysfia2";
-   static String login = "root";
+   public String aaa="";
+   public String xxx = "";
+   static String login = "root5";
    static String password = "";
    static String url = "jdbc:mysql://localhost/"+bd;
 
