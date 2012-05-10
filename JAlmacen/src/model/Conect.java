@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package datos;
+package model;
 
 /**
  *
@@ -16,12 +16,9 @@ import java.sql.SQLException;
 * @author alejo
 */
 public class Conect {
-   static String bd = "sysfia2";
-   public String aaa="";
-   public String xxx = "";
-   static String login = "root5";
+   static String login = "root";
    static String password = "";
-   static String url = "jdbc:mysql://localhost/"+bd;
+   static String url = "jdbc:mysql://localhost/jalmacen";
 
    Connection conn = null;
 
@@ -33,7 +30,7 @@ public class Conect {
          //obtenemos la conexión
          conn = DriverManager.getConnection(url,login,password);
          if (conn!=null){
-            System.out.println("Conección a base de datos "+bd+" OK");
+            System.out.println("Conección a base de datos jalmacen OK");
          }
       }catch(SQLException e){
          System.out.println(e);
