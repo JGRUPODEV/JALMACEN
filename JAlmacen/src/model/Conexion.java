@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package datos;
+package model;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
