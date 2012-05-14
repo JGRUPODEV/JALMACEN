@@ -32,8 +32,6 @@ public class EmpresasModel {
                 objEmp.setEMP_PK(r.getLong("EMP_PK"));
                 objEmp.setEMP_RAZON(r.getString("EMP_RAZON"));
                 objEmp.setEMP_RUT(r.getString("EMP_RUT"));
-                objEmp.setEMP_NOMBRES(r.getString("EMP_NOMBRES"));
-                objEmp.setEMP_APELLIDOS(r.getString("EMP_APELLIDOS"));
                 objEmp.setEMP_TELEFONO1(r.getString("EMP_TELEFONO1"));
                 objEmp.setEMP_TELEFONO2(r.getString("EMP_TELEFONO2"));
                 objEmp.setEMP_CORREO(r.getString("EMP_CORREO"));

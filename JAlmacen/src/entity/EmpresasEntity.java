@@ -12,17 +12,12 @@ public class EmpresasEntity {
 
     private long EMP_PK;
     private String EMP_RAZON;
-    private String EMP_AREA;
     private String EMP_RUT;
-    private String EMP_NOMBRES;
-    private String EMP_APELLIDOS;
     private String EMP_TELEFONO1;
     private String EMP_TELEFONO2;
     private String EMP_FAX;
     private String EMP_SITIO;
     private String EMP_CORREO;
-    private String EMP_MISION;
-    private String EMP_VISION;
 
     public void setEMP_PK(long EMP_PK) {
         this.EMP_PK = EMP_PK;
@@ -30,22 +25,6 @@ public class EmpresasEntity {
 
     public long getEMP_PK() {
         return EMP_PK;
-    }
-
-    public String getEMP_APELLIDOS() {
-        return EMP_APELLIDOS;
-    }
-
-    public void setEMP_APELLIDOS(String EMP_APELLIDOS) {
-        this.EMP_APELLIDOS = EMP_APELLIDOS;
-    }
-
-    public String getEMP_AREA() {
-        return EMP_AREA;
-    }
-
-    public void setEMP_AREA(String EMP_AREA) {
-        this.EMP_AREA = EMP_AREA;
     }
 
     public String getEMP_CORREO() {
@@ -62,22 +41,6 @@ public class EmpresasEntity {
 
     public void setEMP_FAX(String EMP_FAX) {
         this.EMP_FAX = EMP_FAX;
-    }
-
-    public String getEMP_MISION() {
-        return EMP_MISION;
-    }
-
-    public void setEMP_MISION(String EMP_MISION) {
-        this.EMP_MISION = EMP_MISION;
-    }
-
-    public String getEMP_NOMBRES() {
-        return EMP_NOMBRES;
-    }
-
-    public void setEMP_NOMBRES(String EMP_NOMBRES) {
-        this.EMP_NOMBRES = EMP_NOMBRES;
     }
 
     public String getEMP_RAZON() {
@@ -118,13 +81,5 @@ public class EmpresasEntity {
 
     public void setEMP_TELEFONO2(String EMP_TELEFONO2) {
         this.EMP_TELEFONO2 = EMP_TELEFONO2;
-    }
-
-    public String getEMP_VISION() {
-        return EMP_VISION;
-    }
-
-    public void setEMP_VISION(String EMP_VISION) {
-        this.EMP_VISION = EMP_VISION;
     }
 }
