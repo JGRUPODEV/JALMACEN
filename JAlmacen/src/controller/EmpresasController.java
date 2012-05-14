@@ -17,4 +17,9 @@ public class EmpresasController {
         EmpresasModel emp = new EmpresasModel();
         return emp.listado();        
     }
+    
+    public void insertar(EmpresasEntity emp){
+        EmpresasModel empModel = new EmpresasModel();
+        empModel.insertar(emp);
+    }
 }

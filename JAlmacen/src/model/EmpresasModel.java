@@ -4,6 +4,7 @@
  */
 package model;
 
+import com.mysql.jdbc.PreparedStatement;
 import entity.EmpresasEntity;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -41,5 +42,26 @@ public class EmpresasModel {
             Logger.getLogger(EmpresasModel.class.getName()).log(Level.SEVERE, null, ex);
         }
         return emp;
+    }
+    
+    public void insertar(EmpresasEntity emp){
+        try {
+            Conect cnx = new Conect();
+            Connection cn = cnx.getConnection();
+            PreparedStatement ins;
+            ins = (PreparedStatement) cn.prepareStatement("INSERT INTO EMPRESAS(EMP_RAZON,EMP_RUT,EMP_TELEFONO1,EMP_TELEFONO2,EMP_FAX,EMP_SITIO,EMP_CORREO) VALUES(?,?,?,?,?,?,?)");
+            ins.setString(1,emp.getEMP_RAZON());
+            ins.setString(2, emp.getEMP_RUT());
+            ins.setString(3, emp.getEMP_TELEFONO1());
+            ins.setString(4,emp.getEMP_TELEFONO2());
+            ins.setString(5, emp.getEMP_FAX());
+            ins.setString(6, emp.getEMP_SITIO());
+            ins.setString(7, emp.getEMP_CORREO());
+            ins.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpresasModel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
     }
 }
