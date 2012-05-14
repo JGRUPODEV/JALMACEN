@@ -4,6 +4,10 @@
  */
 package view.empresas;
 
+import controller.EmpresasController;
+import entity.EmpresasEntity;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author FYANES
@@ -15,6 +19,12 @@ public class JPrincipalEmpresas extends javax.swing.JInternalFrame {
      */
     public JPrincipalEmpresas() {
         initComponents();
+        EmpresasController emp = new EmpresasController();
+        DefaultTableModel m = (DefaultTableModel)jTable1.getModel();
+        for (EmpresasEntity objeto  : emp.listado()) {        
+            String s[] = {objeto.getEMP_RAZON(),objeto.getEMP_RUT(),objeto.getEMP_TELEFONO1(),objeto.getEMP_CORREO()};
+           m.addRow(s);
+        }
     }
 
     /**
@@ -31,15 +41,20 @@ public class JPrincipalEmpresas extends javax.swing.JInternalFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Razon/Nombre", "Rut", "Telefono", "Correo"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -51,7 +66,7 @@ public class JPrincipalEmpresas extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 58, Short.MAX_VALUE)
+                .addGap(0, 62, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 

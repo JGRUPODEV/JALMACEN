@@ -9,6 +9,8 @@ package entity;
  * @author FYANES
  */
 public class EmpresasEntity {
+
+    private long EMP_PK;
     private String EMP_RAZON;
     private String EMP_AREA;
     private String EMP_RUT;
@@ -16,6 +18,19 @@ public class EmpresasEntity {
     private String EMP_APELLIDOS;
     private String EMP_TELEFONO1;
     private String EMP_TELEFONO2;
+    private String EMP_FAX;
+    private String EMP_SITIO;
+    private String EMP_CORREO;
+    private String EMP_MISION;
+    private String EMP_VISION;
+
+    public void setEMP_PK(long EMP_PK) {
+        this.EMP_PK = EMP_PK;
+    }
+
+    public long getEMP_PK() {
+        return EMP_PK;
+    }
 
     public String getEMP_APELLIDOS() {
         return EMP_APELLIDOS;
@@ -112,9 +127,4 @@ public class EmpresasEntity {
     public void setEMP_VISION(String EMP_VISION) {
         this.EMP_VISION = EMP_VISION;
     }
-    private String EMP_FAX;
-    private String EMP_SITIO;
-    private String EMP_CORREO;
-    private String EMP_MISION;
-    private String EMP_VISION;
 }
